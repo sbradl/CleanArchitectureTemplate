@@ -50,7 +50,7 @@
       "description": "Generate test projects",
       "defaultValue": "true"
     },
-    "renameUseCaseFamily": {
+    "useCaseFamilyName": {
       "type": "parameter",
       "dataType": "string",
       "description": "Sets the name for the use case family",
