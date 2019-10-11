@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CleanArchitectureTemplate.UseCaseFamily.Controllers\CleanArchitectureTemplate.UseCaseFamily.Controllers.csproj" />
+      <ProjectReference Include="..\CleanArchitectureTemplate.UseCaseFamily.Responders\CleanArchitectureTemplate.UseCaseFamily.Responders.csproj" />
+    </ItemGroup>
+
+</Project>

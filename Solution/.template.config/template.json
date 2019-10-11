@@ -1,0 +1,21 @@
+{
+  "author": "Stefan Bradl",
+  "classifications": [ "Clean Architecture" ],
+  "name": "Clean Architecture Solution with main project",
+  "identity": "CleanArchitecture.Solution",       
+  "shortName": "CA.sln",                
+  "tags": {
+    "language": "C#"                      
+  },
+  "sourceName": "CleanArchitectureTemplate",
+  "preferNameDirectory" : "true",
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [".git/**", ".idea/**"]
+        }
+      ]
+    }
+  ]
+} 

@@ -1,0 +1,73 @@
+{
+  "author": "Stefan Bradl",
+  "classifications": [
+    "Clean Architecture"
+  ],
+  "name": "Clean Architecture use case family projects",
+  "identity": "CleanArchitecture.UseCaseFamily",
+  "shortName": "CA.UCF",
+  "tags": {
+    "language": "C#"
+  },
+  "sourceName": "CleanArchitectureTemplate",
+  "preferNameDirectory": "true",
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            ".git/**",
+            ".idea/**",
+            "*.sln",
+            ".gitignore"
+          ]
+        },
+        {
+          "condition": "(!includeTest)",
+          "exclude": [
+            "CleanArchitectureTemplate.UseCaseFamily.*.Test/**"
+          ]
+        }
+      ]
+    }
+  ],
+  "primaryOutputs": [
+    {"path": "CleanArchitectureTemplate.UseCaseFamily.Responders/CleanArchitectureTemplate.UseCaseFamily.Responders.csproj"},
+    
+    {"path": "CleanArchitectureTemplate.UseCaseFamily.Controllers/CleanArchitectureTemplate.UseCaseFamily.Controllers.csproj"},
+    {"path": "CleanArchitectureTemplate.UseCaseFamily.UseCases/CleanArchitectureTemplate.UseCaseFamily.UseCases.csproj"},
+    {"path": "CleanArchitectureTemplate.UseCaseFamily.Views/CleanArchitectureTemplate.UseCaseFamily.Views.csproj"},
+    
+    {"path": "CleanArchitectureTemplate.UseCaseFamily.Controllers.Test/CleanArchitectureTemplate.UseCaseFamily.Controllers.Test.csproj", "condition":  "(includeTest)"},
+    {"path": "CleanArchitectureTemplate.UseCaseFamily.UseCases.Test/CleanArchitectureTemplate.UseCaseFamily.UseCases.Test.csproj", "condition":  "(includeTest)"},
+    {"path": "CleanArchitectureTemplate.UseCaseFamily.Views.Test/CleanArchitectureTemplate.UseCaseFamily.Views.Test.csproj", "condition":  "(includeTest)"}
+  ],
+  "symbols": {
+    "includeTest": {
+      "type": "parameter",
+      "dataType": "bool",
+      "description": "Generate test projects",
+      "defaultValue": "true"
+    },
+    "renameUseCaseFamily": {
+      "type": "parameter",
+      "dataType": "string",
+      "description": "Sets the name for the use case family",
+      "fileRename": "UseCaseFamily",
+      "isRequired": "true"
+    }
+  },
+  "postActions": [
+    {
+      "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
+      "primaryOutputIndexes": "0; 1; 2; 3",
+      "continueOnError": false
+    },
+    {
+      "condition": "(includeTest)",
+      "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
+      "primaryOutputIndexes": "4; 5; 6",
+      "continueOnError": false
+    }
+  ]
+} 

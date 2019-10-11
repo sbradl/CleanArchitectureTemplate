@@ -1,0 +1,93 @@
+{
+  "author": "Stefan Bradl",
+  "classifications": [ "Clean Architecture" ],
+  "name": "Clean Architecture entity family projects",
+  "identity": "CleanArchitecture.EntityFamily",
+  "shortName": "CA.EF",
+  "tags": {
+    "language": "C#"
+  },
+  "sourceName": "CleanArchitectureTemplate",
+  "preferNameDirectory" : "true",
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [".git/**", ".idea/**", "*.sln", ".gitignore"]
+        },
+        {
+          "condition": "(gatewayImplementation == \"\")",
+          "exclude": [
+            "CleanArchitectureTemplate.EntityFamily.Gateways.__GATEWAY_ADAPTER__/**", 
+            "CleanArchitectureTemplate.EntityFamily.Gateways.__GATEWAY_ADAPTER__.Test/**"
+          ]
+        },
+        {
+          "condition": "(!includeTest)",
+          "exclude": [
+            "CleanArchitectureTemplate.EntityFamily.*.Test/**"
+          ]
+        }
+      ]
+    }
+  ],
+  "primaryOutputs": [
+    {"path":  "CleanArchitectureTemplate.EntityFamily.Entities/CleanArchitectureTemplate.EntityFamily.Entities.csproj"},
+    {"path":  "CleanArchitectureTemplate.EntityFamily.Gateways/CleanArchitectureTemplate.EntityFamily.Gateways.csproj"},
+    {
+      "path":  "CleanArchitectureTemplate.EntityFamily.Gateways.__GATEWAY_ADAPTER__/CleanArchitectureTemplate.EntityFamily.Gateways.__GATEWAY_ADAPTER__.csproj", 
+      "condition": "(gatewayImplementation != \"\")"},
+    
+    {"path":  "CleanArchitectureTemplate.EntityFamily.Entities.Test/CleanArchitectureTemplate.EntityFamily.Entities.Test.csproj", "condition":  "(includeTest)"},
+    {
+      "path":  "CleanArchitectureTemplate.EntityFamily.Gateways.__GATEWAY_ADAPTER__.Test/CleanArchitectureTemplate.EntityFamily.Gateways.__GATEWAY_ADAPTER__.Test.csproj", 
+      "condition": "(gatewayImplementation != \"\" && includeTest)"}
+  ],
+  "symbols": {
+    "includeTest": {
+      "type": "parameter",
+      "dataType": "bool",
+      "description": "Generate test projects",
+      "defaultValue": "true"
+    },
+    "gatewayImplementation": {
+      "type": "parameter",
+      "dataType": "string",
+      "description": "When specified a gateway implementation project is generated.",
+      "defaultValue": "",
+      "fileRename": "__GATEWAY_ADAPTER__"
+    },
+    "entityFamilyName": {
+      "type": "parameter",
+      "dataType": "string",
+      "description": "Sets the name for the entity family",
+      "fileRename": "EntityFamily",
+      "isRequired": "true"
+    }
+  },
+  "postActions": [
+    {
+      "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
+      "primaryOutputIndexes": "0; 1",
+      "continueOnError": false
+    },
+    {
+      "condition": "(gatewayImplementation != \"\")",
+      "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
+      "primaryOutputIndexes": "2",
+      "continueOnError": false
+    },
+    {
+      "condition": "(includeTest)",
+      "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
+      "primaryOutputIndexes": "3",
+      "continueOnError": false
+    },
+    {
+      "condition": "(gatewayImplementation != \"\" && includeTest)",
+      "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
+      "primaryOutputIndexes": "4",
+      "continueOnError": false
+    }
+  ]
+} 
