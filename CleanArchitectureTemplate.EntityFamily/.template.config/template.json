@@ -5,7 +5,8 @@
   "identity": "CleanArchitecture.EntityFamily",
   "shortName": "CA.EF",
   "tags": {
-    "language": "C#"
+    "language": "C#",
+    "type": "project"
   },
   "sourceName": "CleanArchitectureTemplate",
   "preferNameDirectory" : "true",

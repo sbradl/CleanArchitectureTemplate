@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectureTemplate.Main", "CleanArchitectureTemplate.Main\CleanArchitectureTemplate.Main.csproj", "{5962CB15-DB27-407A-AC72-0BFFF8ABBCC3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectureTemplate.Solution.Main", "CleanArchitectureTemplate.Solution.Main\CleanArchitectureTemplate.Solution.Main.csproj", "{5962CB15-DB27-407A-AC72-0BFFF8ABBCC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

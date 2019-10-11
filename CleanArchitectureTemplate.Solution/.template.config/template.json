@@ -2,7 +2,7 @@
   "author": "Stefan Bradl",
   "classifications": [ "Clean Architecture" ],
   "name": "Clean Architecture Solution with main project",
-  "identity": "CleanArchitecture.Solution",       
+  "identity": "CleanArchitecture.Solution",
   "shortName": "CA.sln",                
   "tags": {
     "language": "C#"                      
