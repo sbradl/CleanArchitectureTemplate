@@ -70,25 +70,29 @@
     {
       "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
       "primaryOutputIndexes": "0; 1",
-      "continueOnError": false
+      "continueOnError": false,
+      "manualInstructions": []
     },
     {
       "condition": "(gatewayImplementation != \"\")",
       "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
       "primaryOutputIndexes": "2",
-      "continueOnError": false
+      "continueOnError": false,
+      "manualInstructions": []
     },
     {
       "condition": "(includeTest)",
       "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
       "primaryOutputIndexes": "3",
-      "continueOnError": false
+      "continueOnError": false,
+      "manualInstructions": []
     },
     {
       "condition": "(gatewayImplementation != \"\" && includeTest)",
       "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
       "primaryOutputIndexes": "4",
-      "continueOnError": false
+      "continueOnError": false,
+      "manualInstructions": []
     }
   ]
 } 

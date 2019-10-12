@@ -62,13 +62,15 @@
     {
       "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
       "primaryOutputIndexes": "0; 1; 2; 3",
-      "continueOnError": false
+      "continueOnError": false,
+      "manualInstructions": []
     },
     {
       "condition": "(includeTest)",
       "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
       "primaryOutputIndexes": "4; 5; 6",
-      "continueOnError": false
+      "continueOnError": false,
+      "manualInstructions": []
     }
   ]
 } 
